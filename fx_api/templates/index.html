@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - FX API</title>
+        {% else %}
+        <title>FX API</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            <h1>FX API Index</h1>
+            <p>A prototype API to perform FX calculation with xrcodes e.g. (GBP, USD, EUR).</p>
+            <p>Fees are applied during conversion: amount < £1000 = -£25 | amount >= £1000 = -1%</p>
+            <p>GBP based rates used.</p>
+            <p>Version 1.0</p>
+            <br>
+        </div>
+        <div>
+            <p>Suggested HTTP clients: cURL, python requests.</p>
+            <p>Get rates: <a href="http://127.0.0.1:5000/api/v1/xrs">localhost:5000/api/v1/xrs</a></p>
+            <p>Get single rate: localhost:5000/api/v1/xrs/[xrcode]</p>
+            <p>Convert currency: localhost:5000/api/v1/xrs/[xrcode to exchange from]/[xrcode to exchange to]/[amount]</p>
+            <br>
+        </div>
+        <div>
+            <p><b>Possible extensions:</b></p>
+            <p>Implement database.</p>
+            <p>Adjust exchange rates. (Post, put, delete)</p>
+            <p>Use flask_restful instead (class based implementation).</p>
+            <p>API key generator for authentication.</p>
+        </div>
+    </body>
+</html>
