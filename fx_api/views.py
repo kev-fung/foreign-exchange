@@ -17,7 +17,7 @@ def get_xrs():
 
 # Get single exchange rate
 @app.route('/api/v1/xrs/<string:xrcode>')
-def get_xrcode(xrcode):
+def get_xr(xrcode):
     capture = [xr for xr in xrs if xr['xrcode'] == xrcode.upper()]
     if len(capture) is 0:
         abort(404)

@@ -19,7 +19,7 @@ class TestViews(unittest.TestCase):
         data = json.loads(response.data)
         self.assertEqual(data['xrs'], models.xrs, "failed getting xrs")
 
-    def test_getxrcode(self):
+    def test_getxr(self):
         response = self.app.get('/api/v1/xrs/GBP')
         data = json.loads(response.data)
         self.assertEqual(data['xr']['rate'], 1, "failed getting single xr")
