@@ -4,7 +4,7 @@
 A prototype RESTful web API for calculating exchanged amounts using Flask.
 Only three rates are implemented so far (GBP, USD, EUR) given the nature of this project. 
 The optional task of applying a fee to conversions is implemented.
-Data formats are in JSON.
+Data formats are in JSON. More features will be added over time.
 
 ## Requirements
 - flask == 1.1.1
